@@ -819,7 +819,7 @@ static int filter_frame(AVFilterLink *inlink, AVFrame *in)
         dst->top_field_first = field;
     }
 
-    av_log(ctx, AV_LOG_DEBUG, "SC:%d | COMBS: %3d %3d %3d %3d %3d (combpel=%d)"
+    av_log(ctx, AV_LOG_WARNING, "SC:%d | COMBS: %3d %3d %3d %3d %3d (combpel=%d)"
            " match=%d combed=%s\n", sc, combs[0], combs[1], combs[2], combs[3], combs[4],
            fm->combpel, match, dst->interlaced_frame ? "YES" : "NO");
 
